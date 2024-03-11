@@ -3,14 +3,13 @@
 <html >
 <head>
 
-/* Style the header */
-header {
+header <
   background-color: #E6E6FA;
   padding: 10px;
   text-align: center;
   font-size: 35px;
   color: #9370DB;
-}
+>
 
 /* Create two columns/boxes that floats next to each other */
 nav {
