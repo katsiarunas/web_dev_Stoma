@@ -1,69 +1,272 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="en">
 <head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-h1 {
-  border: 5px solid red;
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap')
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap')
+
+   caption {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;}
+ * {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* Regular */
+    padding: 10px;
+    margin: 0;
 }
-h2 {
-  border: 4px dotted blue;
+div > p {
+    font-weight: bold;
 }
-h4 {
-  border: 4px dotted red;
+div:hover {
+    background-color: lightblue;
 }
-div {
-  background-color: lightblue;
+table tr td:last-child {
+    color: red;
 }
-p1 {
-  background-color: yellow;
-}
-p2 {
-  background-color: #FFEBCD;
-}
-p3 {
-  background-color: #D2691E;
-}
-p4 {
-  background-color: #DC143C;
+table tr:nth-child(even) {
+    background-color: lightgray;
 }
 
+table tr:nth-child(odd) {
+    background-color: lightblue;
+}
+p::first-letter {
+    font-size: 1.5em;
+}
+::selection {
+    background-color: lightblue; 
+    color: black; }
+ul {
+    list-style: none; 
+}
+
+li::before {
+    content: "\2192"; 
+    margin-right: 0.5em; 
+}
+p:not(.special) {
+    color: #333; 
+    font-size: 16px; 
+    line-height: 1.5; 
+}
+ h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;}
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;}
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;}
+div {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;}
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;}
+tr {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;}
+caption {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;}
 </style>
 </head>
-
-<body>
-
-<header>
-  <h3>Stoma Katsiaryna 354</h3>
-</header>
-
-    
-  <article>
-    <h1>1. Describe the ways to open developers console in Mozilla Firefox and
-Safari.</h1>
-    <p>To open the developer console in Mozilla Firefox, you can use keyboard shortcuts (Ctrl + Shift + I or F12;Press Cmd + Option + I) or Right-click anywhere on a webpage, select "Inspect Element", and the developer tools window will open with the console tab selected.</p>
-
-<p>To open the developer console in Safari, you can also use keyboard shortcuts (Press Cmd + Option + C) or Right-click anywhere on a webpage and select "Inspect Element", then navigate to the "Console" tab in the developer tools window.</p>
-    
-     <h2>2. What way of including internal links into the HTML page you would consider generally preferable: absolute or relative links?</h2>
-    <p>The preferred way to include internal links in an HTML page generally depends on the specific use case and website structure. Relative links are more portable and easier to manage when moving or copying files within the same directory or to a different directory. Absolute links contain the full URL, including the domain name, which can cause issues if the domain changes or if the website is migrated to a different server. Relative links work seamlessly on local development environments and staging servers without having to change the URLs. This makes the development process smoother and prevents broken links. </p>
-    
-      <h4>3. What is the difference between JPG, GIF and PNG formats?</h4>
-    <p>Each image format has its own strengths and weaknesses, and the choice of format depends on the specific requirements of the image, such as quality, file size, transparency, and color depth. JPG is best for photographs, GIF for simple animations and images with solid colors, and PNG for images with sharp edges and transparency.</p>
-    
-     <h1>4. What is WEBP image type?</h1>
-    <p> WebP is a powerful and efficient image format that offers numerous benefits for website performance and user experience. As web technologies continue to evolve, WebP is increasingly becoming a popular choice for optimizing images on the web.</p>
-
- <h1>5. What is SVG?</h1>
-    <p>SVG is a versatile and powerful image format that offers numerous benefits for web design, including scalability, resolution independence, interactivity, and accessibility. It has become a popular choice for creating icons, logos, illustrations, charts, and other graphics on the web.</p>
-    
-    <img src="screenshot.jpg">
- <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc sed velit. Sollicitudin ac orci phasellus egestas. Sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Nisi vitae suscipit tellus mauris a. </div>
-  <p1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc sed velit. Sollicitudin ac orci phasellus egestas. Sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Nisi vitae suscipit tellus mauris a.</p1>
-  <p2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc sed velit. Sollicitudin ac orci phasellus egestas. Sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Nisi vitae suscipit tellus mauris a.</p2>
-  <p3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc sed velit. Sollicitudin ac orci phasellus egestas. Sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Nisi vitae suscipit tellus mauris a.</p3>
-  <p4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc sed velit. Sollicitudin ac orci phasellus egestas. Sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Nisi vitae suscipit tellus mauris a.</p4>
-
-</article>
+<body id="top">
+<main>
+  
+        <article id="text__lists">
+          <header>
+            <h1>Lists</h1>
+          </header>
+          <div>
+            <h3>Definition list</h3>
+            <dl>
+              <dt>Definition List Title</dt>
+              <dd>This is a definition list division.</dd>
+            </dl>
+            <h3>Ordered List</h3>
+            <ol>
+              <li>List Item 1</li>
+              <li>List Item 2</li>
+              <li>List Item 3</li>
+            </ol>
+            <h3>Unordered List</h3>
+            <ul>
+              <li>List Item 1</li>
+              <li>List Item 2</li>
+              <li>List Item 3</li>
+            </ul>
+          </div>
+          <footer>
+            <p><a href="#top">[Top]</a></p>
+          </footer>
+        </article>
+        <article id="text__hr">
+          <header>
+            <h1>Horizontal rules</h1>
+          </header>
+          <div>
+            <hr>
+          </div>
+          <footer>
+            <p><a href="#top">[Top]</a></p>
+          </footer>
+        </article>
+        <article id="text__tables">
+          <header>
+            <h1>Tabular data</h1>
+          </header>
+          <table>
+            <caption>Table Caption</caption>
+            <thead>
+              <tr>
+                <th>Table Heading 1</th>
+                <th>Table Heading 2</th>
+                <th>Table Heading 3</th>
+                <th>Table Heading 4</th>
+                <th>Table Heading 5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+                <td>Table Cell 3</td>
+                <td>Table Cell 4</td>
+                <td>Table Cell 5</td>
+              </tr>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+                <td>Table Cell 3</td>
+                <td>Table Cell 4</td>
+                <td>Table Cell 5</td>
+              </tr>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+                <td>Table Cell 3</td>
+                <td>Table Cell 4</td>
+                <td>Table Cell 5</td>
+              </tr>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+                <td>Table Cell 3</td>
+                <td>Table Cell 4</td>
+                <td>Table Cell 5</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Table Footer 1</th>
+                <th>Table Footer 2</th>
+                <th>Table Footer 3</th>
+                <th>Table Footer 4</th>
+                <th>Table Footer 5</th>
+              </tr>
+            </tfoot>
+          </table>
+          <footer>
+            <p><a href="#top">[Top]</a></p>
+          </footer>
+        </article>
+        <article id="text__code">
+          <header>
+            <h1>Code</h1>
+          </header>
+          <div>
+            <p><strong>Keyboard input:</strong> <kbd>Cmd</kbd></p>
+            <p><strong>Inline code:</strong> <code>&lt;div&gt;code&lt;/div&gt;</code></p>
+            <p><strong>Sample output:</strong> <samp>This is sample output from a computer program.</samp></p>
+            <h2>Pre-formatted text</h2>
+            <pre>P R E F O R M A T T E D T E X T
+  ! " # $ % &amp; ' ( ) * + , - . /
+  0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+  @ A B C D E F G H I J K L M N O
+  P Q R S T U V W X Y Z [ \ ] ^ _
+  ` a b c d e f g h i j k l m n o
+  p q r s t u v w x y z { | } ~ </pre>
+          </div>
+          <footer>
+            <p><a href="#top">[Top]</a></p>
+          </footer>
+        </article>
+        <article id="text__inline">
+          <header>
+            <h1>Inline elements</h1>
+          </header>
+          <div>
+            <p><a href="#!">This is a text link</a>.</p>
+            <p><strong>Strong is used to indicate strong importance.</strong></p>
+            <p><em>This text has added emphasis.</em></p>
+            <p>The <b>b element</b> is stylistically different text from normal text, without any special importance.
+            </p>
+            <p>The <i>i element</i> is text that is offset from the normal text.</p>
+            <p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation.
+            </p>
+            <p><del>This text is deleted</del> and <ins>This text is inserted</ins>.</p>
+            <p><s>This text has a strikethrough</s>.</p>
+            <p>Superscript<sup>®</sup>.</p>
+            <p>Subscript for things like H<sub>2</sub>O.</p>
+            <p><small>This small text is small for for fine print, etc.</small></p>
+            <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+            <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline
+                quotation.</q></p>
+            <p><cite>This is a citation.</cite></p>
+            <p>The <dfn>dfn element</dfn> indicates a definition.</p>
+            <p>The <mark>mark element</mark> indicates a highlight.</p>
+            <p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
+            <p>The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time></p>
+          </div>
+          <footer>
+            <p><a href="#top">[Top]</a></p>
+          </footer>
+        </article>
+        <article id="text__comments">
+          <header>
+            <h1>HTML Comments</h1>
+          </header>
+          <div>
+            <p>There is comment here:
+              <!--This comment should not be displayed-->
+            </p>
+            <p>There is a comment spanning multiple tags and lines below here.</p>
+            <!--<p><a href="#!">This is a text link. But it should not be displayed in a comment</a>.</p>
+              <p><strong>Strong is used to indicate strong importance. But, it should not be displayed in a comment</strong></p>
+              <p><em>This text has added emphasis. But, it should not be displayed in a comment</em></p>-->
+          </div>
+          <footer>
+            <p><a href="#top">[Top]</a></p>
+          </footer>
+        </article>
+  <article id="text__paragraphs">
+   <header><h1>What is selector’s specificity and who it’s calculated?</h1></header>
+   <p>
+     Selector specificity is a value that determines which style rules are applied to an element when multiple conflicting rules exist. It is calculated based on the components of a selector. The specificity is usually represented as a four-part value: (a, b, c, d) where each part corresponds to the number of occurrences of different types of selectors in the CSS rule.
+   </p>
+  <header><h1>What are complex selectors?</h1></header>
+   <p>
+     Complex selectors are selectors that combine multiple simple selectors to target specific elements on a web page. These can include descendant selectors, child selectors, adjacent sibling selectors, general sibling selectors, attribute selectors, and more. By using complex selectors, you can target elements based on their relationship to other elements or based on specific attributes.
+   </p>
+  <header><h1>What is the difference between pseudo-classes and pseudo-elements?</h1></header>
+   <p>
+     Pseudo-classes are used to define a special state of an element. They start with a colon : followed by the pseudo-class name. For example, :hover, :active, :first-child. Pseudo-elements, on the other hand, allow you to style specific parts of an element. They start with a double colon :: followed by the pseudo-element name. For example, ::before, ::after, ::first-line.
+   </p>
+  </article>
+      </section>
+</main>
 </body>
 </html>
