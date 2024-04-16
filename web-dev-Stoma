@@ -1,272 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>CSS Template</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap')
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap')
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Concepts</title>
+    <style>
+        img {
+            float: right;
+            max-width: 400px;
+            margin: 10px;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
 
-   caption {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;}
- * {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400; /* Regular */
-    padding: 10px;
-    margin: 0;
-}
-div > p {
-    font-weight: bold;
-}
-div:hover {
-    background-color: lightblue;
-}
-table tr td:last-child {
-    color: red;
-}
-table tr:nth-child(even) {
-    background-color: lightgray;
-}
-
-table tr:nth-child(odd) {
-    background-color: lightblue;
-}
-p::first-letter {
-    font-size: 1.5em;
-}
-::selection {
-    background-color: lightblue; 
-    color: black; }
-ul {
-    list-style: none; 
-}
-
-li::before {
-    content: "\2192"; 
-    margin-right: 0.5em; 
-}
-p:not(.special) {
-    color: #333; 
-    font-size: 16px; 
-    line-height: 1.5; 
-}
- h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;}
-h2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;}
-h3 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;}
-div {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;}
-p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;}
-tr {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;}
-caption {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;}
-</style>
+    </style>
 </head>
-<body id="top">
-<main>
-  
-        <article id="text__lists">
-          <header>
-            <h1>Lists</h1>
-          </header>
-          <div>
-            <h3>Definition list</h3>
-            <dl>
-              <dt>Definition List Title</dt>
-              <dd>This is a definition list division.</dd>
-            </dl>
-            <h3>Ordered List</h3>
-            <ol>
-              <li>List Item 1</li>
-              <li>List Item 2</li>
-              <li>List Item 3</li>
-            </ol>
-            <h3>Unordered List</h3>
-            <ul>
-              <li>List Item 1</li>
-              <li>List Item 2</li>
-              <li>List Item 3</li>
-            </ul>
-          </div>
-          <footer>
-            <p><a href="#top">[Top]</a></p>
-          </footer>
+
+<body>
+<header>
+        <h1>CSS Concepts</h1>
+        <nav>
+            <a href="#box-model">Box Model</a>
+            <a href="#clearfix-hack">Clearfix Hack</a>
+            <a href="#margin-collapse">Margin Collapse</a>
+            <a href="#holy-grail-layout">Holy Grail Layout</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>Understanding CSS Concepts</h1>
+            <p><strong>Box Model in CSS:</strong> The box model in CSS defines the design and layout of elements on a webpage. It consists of content, padding, border, and margin. The <em>box-sizing</em> property is used to define how the total width and height of an element are calculated. It can have two values: <mark>content-box</mark> (default) or <mark>border-box</mark>.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrbgSyY-segOeh1fbdZLaAgLUXS8NEiipUWrjAJj4ucg&s" alt="Box Model">
+
+            <h2>CSS Hacks:</h2>
+            <p><strong>Clearfix Hack:</strong> The clearfix hack is a technique used to clear floated elements within a container. It is applied when the container's height collapses due to floating elements inside it.</p>
+
+            <h3>Margin Collapse and Usage:</h3>
+            <p><strong>Margin Collapse:</strong> Margin collapse occurs when the vertical margins of two adjacent elements are combined into a single margin. The <mark>margin: auto</mark> property is used to center an element horizontally within its parent, while negative margin values can be used for overlapping elements or creating unique layouts.</p>
+            <img src="https://miro.medium.com/v2/resize:fit:421/0*kAD00byJs8jdmXvr.png" alt="Margin Collapse" width=200>
+            <img src="https://csswolf.com/wp-content/uploads/2022/09/margin-shorthand-declared-with-2-values.svg" alt="Margin Values" width=200>
+
+            <h4>The Holy Grail Layout:</h4>
+            <p>The Holy Grail layout refers to a web design pattern with a header, footer, and three columns of content. The problem with achieving this layout traditionally was the complexity of equal-height columns.</p>
+
+            <h4>Modern Solutions:</h4>
+            <p>Modern ways to achieve the Holy Grail layout include using flexbox or CSS grid layouts. These provide more flexible and responsive options for creating complex layouts without the need for hacks.</p>
+            <img src="https://www.computerhope.com/issues/pictures/gridhg_00-diagram.jpg" alt="Holy Grail Layout" width=200>
         </article>
-        <article id="text__hr">
-          <header>
-            <h1>Horizontal rules</h1>
-          </header>
-          <div>
-            <hr>
-          </div>
-          <footer>
-            <p><a href="#top">[Top]</a></p>
-          </footer>
-        </article>
-        <article id="text__tables">
-          <header>
-            <h1>Tabular data</h1>
-          </header>
-          <table>
-            <caption>Table Caption</caption>
-            <thead>
-              <tr>
-                <th>Table Heading 1</th>
-                <th>Table Heading 2</th>
-                <th>Table Heading 3</th>
-                <th>Table Heading 4</th>
-                <th>Table Heading 5</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-              </tr>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-              </tr>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-              </tr>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <th>Table Footer 1</th>
-                <th>Table Footer 2</th>
-                <th>Table Footer 3</th>
-                <th>Table Footer 4</th>
-                <th>Table Footer 5</th>
-              </tr>
-            </tfoot>
-          </table>
-          <footer>
-            <p><a href="#top">[Top]</a></p>
-          </footer>
-        </article>
-        <article id="text__code">
-          <header>
-            <h1>Code</h1>
-          </header>
-          <div>
-            <p><strong>Keyboard input:</strong> <kbd>Cmd</kbd></p>
-            <p><strong>Inline code:</strong> <code>&lt;div&gt;code&lt;/div&gt;</code></p>
-            <p><strong>Sample output:</strong> <samp>This is sample output from a computer program.</samp></p>
-            <h2>Pre-formatted text</h2>
-            <pre>P R E F O R M A T T E D T E X T
-  ! " # $ % &amp; ' ( ) * + , - . /
-  0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
-  @ A B C D E F G H I J K L M N O
-  P Q R S T U V W X Y Z [ \ ] ^ _
-  ` a b c d e f g h i j k l m n o
-  p q r s t u v w x y z { | } ~ </pre>
-          </div>
-          <footer>
-            <p><a href="#top">[Top]</a></p>
-          </footer>
-        </article>
-        <article id="text__inline">
-          <header>
-            <h1>Inline elements</h1>
-          </header>
-          <div>
-            <p><a href="#!">This is a text link</a>.</p>
-            <p><strong>Strong is used to indicate strong importance.</strong></p>
-            <p><em>This text has added emphasis.</em></p>
-            <p>The <b>b element</b> is stylistically different text from normal text, without any special importance.
-            </p>
-            <p>The <i>i element</i> is text that is offset from the normal text.</p>
-            <p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation.
-            </p>
-            <p><del>This text is deleted</del> and <ins>This text is inserted</ins>.</p>
-            <p><s>This text has a strikethrough</s>.</p>
-            <p>Superscript<sup>®</sup>.</p>
-            <p>Subscript for things like H<sub>2</sub>O.</p>
-            <p><small>This small text is small for for fine print, etc.</small></p>
-            <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
-            <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline
-                quotation.</q></p>
-            <p><cite>This is a citation.</cite></p>
-            <p>The <dfn>dfn element</dfn> indicates a definition.</p>
-            <p>The <mark>mark element</mark> indicates a highlight.</p>
-            <p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
-            <p>The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time></p>
-          </div>
-          <footer>
-            <p><a href="#top">[Top]</a></p>
-          </footer>
-        </article>
-        <article id="text__comments">
-          <header>
-            <h1>HTML Comments</h1>
-          </header>
-          <div>
-            <p>There is comment here:
-              <!--This comment should not be displayed-->
-            </p>
-            <p>There is a comment spanning multiple tags and lines below here.</p>
-            <!--<p><a href="#!">This is a text link. But it should not be displayed in a comment</a>.</p>
-              <p><strong>Strong is used to indicate strong importance. But, it should not be displayed in a comment</strong></p>
-              <p><em>This text has added emphasis. But, it should not be displayed in a comment</em></p>-->
-          </div>
-          <footer>
-            <p><a href="#top">[Top]</a></p>
-          </footer>
-        </article>
-  <article id="text__paragraphs">
-   <header><h1>What is selector’s specificity and who it’s calculated?</h1></header>
-   <p>
-     Selector specificity is a value that determines which style rules are applied to an element when multiple conflicting rules exist. It is calculated based on the components of a selector. The specificity is usually represented as a four-part value: (a, b, c, d) where each part corresponds to the number of occurrences of different types of selectors in the CSS rule.
-   </p>
-  <header><h1>What are complex selectors?</h1></header>
-   <p>
-     Complex selectors are selectors that combine multiple simple selectors to target specific elements on a web page. These can include descendant selectors, child selectors, adjacent sibling selectors, general sibling selectors, attribute selectors, and more. By using complex selectors, you can target elements based on their relationship to other elements or based on specific attributes.
-   </p>
-  <header><h1>What is the difference between pseudo-classes and pseudo-elements?</h1></header>
-   <p>
-     Pseudo-classes are used to define a special state of an element. They start with a colon : followed by the pseudo-class name. For example, :hover, :active, :first-child. Pseudo-elements, on the other hand, allow you to style specific parts of an element. They start with a double colon :: followed by the pseudo-element name. For example, ::before, ::after, ::first-line.
-   </p>
-  </article>
-      </section>
-</main>
+    </main>
+<footer>
+        <p>Student: Stoma Kate | Course: Web Design | Place: 52 class room</p>
+    </footer>
+
 </body>
+
 </html>
