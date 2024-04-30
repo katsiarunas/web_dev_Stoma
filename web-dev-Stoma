@@ -1,70 +1,103 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BIOlife</title>
-<style>
-  body { font-family: Arial, sans-serif; }
-  .header { background-color: #76B947; padding: 10px; color: white; }
-  .nav { background-color: #333; padding: 10px; }
-  .nav a { color: white; text-decoration: none; padding: 0 15px; }
-  .content { padding: 20px; }
-  .news { display: flex; flex-wrap: wrap; }
-  .news-article { width: 33%; padding: 10px; box-sizing: border-box; }
-  .news-article img { max-width: 100%; }
-  .footer { background-color: #333; color: white; text-align: center; padding: 10px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        /* CSS styles go here */
+        /* Example styles just for illustration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        .news-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .news-item {
+            width: 23%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .news-item img {
+            width: 100%;
+            height: auto;
+        }
+        .news-item h2 {
+            margin-top: 0;
+        }
+        .news-item .excerpt {
+            margin-top: 10px;
+        }
+        .read-more {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-
-<div class="header">
-  <h1>BIOlife</h1>
-</div>
-
-<div class="nav">
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#news">News</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</div>
-
-<div class="content">
-  <!-- Main banner image and text -->
-  <div class="main-banner">
-    <img src="https://i.pinimg.com/564x/4b/dd/33/4bdd33ef858c54f3c832ea6fb97eece3.jpg" alt="Banner Image" height=300>
-    <h2>Mauris sodales placerat massa</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-  </div>
-  
-  <!-- News Section -->
-  <h2>News</h2>
-  <div class="news">
-    <div class="news-article">
-      <img src="https://avatars.dzeninfra.ru/get-zen_doc/5227693/pub_6209372808145b0f7c36666b_62093ddcd0492370ecb44292/scale_1200" alt="News Image" height=200>
-      <h3>Vestibulum sed ipsum</h3>
-      <p>Nunc pellentesque tristique sollicitudin...</p>
-      <a href="#">read more »</a>
+    <header>
+        <img src="https://i.pinimg.com/564x/23/5e/35/235e355fd0e787e553e1b73a46132dee.jpg" alt="Your Logo" width="100">
+        <nav>
+            <a href="#">Home</a> |
+            <a href="#">About</a> |
+            <a href="#">Services</a> |
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <img src="https://i.pinimg.com/564x/53/ba/b8/53bab8d2650f1dbafa19e98537437aa6.jpg" alt="Hero Image" width="400">
+        <h1>Welcome to Our Website</h1>
+        <p>This is a brief description of what we do.</p>
     </div>
-    <div class="news-article">
-      <img src="https://img.freepik.com/premium-photo/rear-red-car-headlight-closeup_338491-16094.jpg?w=1060" alt="News Image" height=200>
-      <h3>Phasellus purus orci</h3>
-      <p>In id ullamcorper lectus. Donec ac tempus nibh...</p>
-      <a href="#">read more »</a>
-    </div>
-    <div class="news-article">
-      <img src="https://i2018.otzovik.com/2018/06/07/6561591/img/60815753.jpeg" alt="News Image" height=200>
-      <h3>Praesent adipiscing</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
-      <a href="#">read more »</a>
-    </div>
-  </div>
-</div>
-
-<div class="footer">
-  <p>&copy; 2024 BIOlife. All rights reserved.</p>
-</div>
-
+    <section class="news-section">
+        <div class="news-item">
+            <img src="https://i.pinimg.com/564x/af/1d/60/af1d609171ac4fdf381daa8c5d3a1f04.jpg" alt="News 1 Thumbnail">
+            <h2>News 1 Heading</h2>
+            <p class="meta-info">April 30, 2024 | By Admin</p>
+            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="news-item">
+            <img src="https://i.pinimg.com/564x/39/3c/06/393c06a216c80e6470af937ef02c37b2.jpg" alt="News 2 Thumbnail">
+            <h2>News 2 Heading</h2>
+            <p class="meta-info">April 29, 2024 | By Editor</p>
+            <p class="excerpt">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="news-item">
+            <img src="https://i.pinimg.com/originals/74/b4/bb/74b4bbb91d1df316d7bdbc787ad046b8.gif" alt="News 3 Thumbnail">
+            <h2>News 3 Heading</h2>
+            <p class="meta-info">April 28, 2024 | By Writer</p>
+            <p class="excerpt">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="news-item">
+            <img src="https://i.pinimg.com/originals/9a/9f/ad/9a9fad00690b0db0dde203bd45419e0c.gif" alt="News 4 Thumbnail">
+            <h2>News 4 Heading</h2>
+            <p class="meta-info">April 27, 2024 | By Reporter</p>
+            <p class="excerpt">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </section>
 </body>
 </html>
