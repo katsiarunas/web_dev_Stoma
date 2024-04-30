@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        /* Optional styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        button.calculate {
+            background-color: #4CAF50;
+            color: white;
+            margin-right: 10px;
+        }
+        button.reset {
+            background-color: #f44336;
+            color: white;
+        }
+        output {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+.slider-container {
+            width: 80%;
+            margin: 30px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            width: 100%;
+            flex: 0 0 auto;
+        }
+        .slide-content {
+            padding: 40px;
+        }
+        .slide h3 {
+            margin-top: 0;
+        }
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            outline: none;
+            z-index: 1;
+        }
+        .prev-btn {
+            left: -5px;
+        }
+        .next-btn {
+            right: -5px;
+        }
+        .sources {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="calculatorForm">
+        <label for="num1">First Number:</label>
+        <input type="number" id="num1" name="num1" value="0">
+        
+        <label for="operator">Operation:</label>
+        <select id="operator" name="operator">
+            <option value="+">Addition</option>
+            <option value="-">Subtraction</option>
+            <option value="*">Multiplication</option>
+            <option value="/">Division</option>
+        </select>
+        
+        <label for="num2">Second Number:</label>
+        <input type="number" id="num2" name="num2" value="0">
+        
+        <button type="button" class="calculate" onclick="performCalculation()">Calculate</button>
+        <button type="reset" class="reset">Reset</button>
+        
+        <output id="result"></output>
+    </form>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <div class="slide-content">
+                    <h3>Explain “repaint” and “reflow” of the webpage:</h3>
+                    <p>Repaint refers to the process of updating the pixels on the screen when some visual aspect of the page changes, without changing the layout. Reflow, on the other hand, involves recalculating the layout of the entire page due to changes in its structure or content. Both processes can affect the performance of the webpage.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h3>How does JavaScript on the webpage affects the page load speed and performance?</h3>
+                    <p>JavaScript can affect page load speed and performance in various ways. If JavaScript files are large or numerous, they can increase the time it takes for the page to load. Additionally, poorly optimized JavaScript code can cause the browser to execute slower, leading to delays in rendering and responsiveness.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h3>What is “minification” of the script? Why it is useful to minify your scripts?</h3>
+                    <p>Minification is the process of removing unnecessary characters from a script (such as white spaces, comments, and line breaks) to reduce its file size. It is useful because smaller file sizes lead to faster downloads and parsing by the browser, improving page load speed and overall performance.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h3>What is a JS Web Worker and when do we need it?</h3>
+                    <p>A JavaScript Web Worker is a mechanism that enables concurrent execution of scripts in the browser, allowing time-consuming tasks to run in the background without blocking the main execution thread. Web Workers are useful when performing tasks such as complex computations, file I/O operations, or network requests that would otherwise cause the UI to become unresponsive.</p>
+                </div>
+            </div>
+                    </div>
+        <button class="nav-btn prev-btn" onclick="prevSlide()"><</button>
+        <button class="nav-btn next-btn" onclick="nextSlide()">></button>
+    </div>
+    <script>
+        // Function to perform basic arithmetic operations
+        function calculate(num1, operator, num2) {
+            switch(operator) {
+                case '+':
+                    return num1 + num2;
+                case '-':
+                    return num1 - num2;
+                case '*':
+                    return num1 * num2;
+                case '/':
+                    if(num2 !== 0) {
+                        return num1 / num2;
+                    } else {
+                        return "Error: Division by zero is not allowed.";
+                    }
+                default:
+                    return "Error: Invalid operator.";
+            }
+        }
+
+        // Function to handle calculation and display result
+        function performCalculation() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var operator = document.getElementById('operator').value;
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result = calculate(num1, operator, num2);
+            document.getElementById('result').textContent = "The result is: " + result;
+        }
+
+
+
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.transform = `translateX(-${100 * index}%)`;
+            });
+        }
+
+        function prevSlide() {
+            if (slideIndex > 0) {
+                slideIndex--;
+                showSlide(slideIndex);
+            }
+        }
+
+        function nextSlide() {
+            if (slideIndex < slides.length - 1) {
+                slideIndex++;
+                showSlide(slideIndex);
+            }
+        }
+    </script>
+</body>
+</html>
