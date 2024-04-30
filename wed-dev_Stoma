@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        /* CSS styles go here */
+        /* Example styles just for illustration purposes */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        header {
+            width: 100%;
+            background-color: #00008B;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .top-news {
+            flex: 1 1 100%;
+            text-align: center;
+            padding: 50px;
+            background-color: #FFE4E1;
+        }
+        .news-section {
+            flex: 2 1 65%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .news-item {
+            flex: 1 1 30%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .news-item img {
+            width: 100%;
+            height: auto;
+        }
+        .news-item h2 {
+            margin-top: 0;
+        }
+        .news-item .excerpt {
+            margin-top: 10px;
+        }
+        .read-more {
+            display: inline-block;
+            background-color: #00008B;
+            color: #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        aside {
+            flex: 1 1 30%;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        aside li {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .news-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .news-item {
+                flex: 1 1 80%;
+            }
+            aside {
+                flex: 1 1 100%;
+                margin-top: 20px;
+            }
+            .top-news {
+                padding: 20px;
+            }
+            .top-news img {
+                max-width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .news-item {
+                flex: 1 1 90%;
+            }
+            .news-item .excerpt {
+                display: none;
+            }
+        }
+    </style>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Your Website Name</h1>
+    </header>
+    <div class="container">
+        <div class="top-news">
+            <img src="https://i.pinimg.com/564x/84/ca/8b/84ca8b93c95d7e4aa6a3f9d86b69a92a.jpg" alt="Top News Image" width="400">
+            <h2>Top News Heading</h2>
+            <p>This is a brief description of the top news.</p>
+            <button>Read More</button>
+        </div>
+        <section class="news-section">
+            <div class="news-item">
+                <img src="https://i.pinimg.com/564x/b8/fe/e6/b8fee6399ea2c8f5d3840f4e2aeb361a.jpg" alt="News 1 Thumbnail">
+                <h2>News 1 Heading</h2>
+                <p class="meta-info">April 30, 2024 | By Admin</p>
+                <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="news-item">
+                <img src="https://i.pinimg.com/564x/18/a2/b5/18a2b5f1a95d5462f29082fd3bf3b66e.jpg" alt="News 2 Thumbnail">
+                <h2>News 2 Heading</h2>
+                <p class="meta-info">April 29, 2024 | By Editor</p>
+                <p class="excerpt">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="news-item">
+                <img src="https://i.pinimg.com/564x/6f/23/83/6f2383e9b342b8b643e667587d20594f.jpg" alt="News 3 Thumbnail">
+                <h2>News 3 Heading</h2>
+                <p class="meta-info">April 28, 2024 | By Writer</p>
+                <p class="excerpt">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </section>
+        <aside>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>
